@@ -1,0 +1,306 @@
+.div.earn {    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+  }
+
+  .earn .earnOuter {
+    border-radius: 16px;
+    background-color: rgba(13, 13, 16, 1);
+    box-shadow: 5px 8px 10px 2px rgba(0,0,0, 0.1);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 97vw;
+    margin-right: 2px;
+    padding: 54px 60px;
+  }
+  @media (max-width: 991px) {
+    .earn .earnOuter {
+      max-width: 97vw;
+      margin-top: 18px;
+      padding: 10px 20px;
+    }
+  }
+  .earn .earnInner {
+    display: flex;
+    width: 599px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .earn .earnHeading {
+    letter-spacing: 1.92px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font: 400 96px VT323, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .earn .earnHeading {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  .earn .earnParagraph {
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 33px;
+    width: 292px;
+    font: 400 20px VT323, sans-serif;
+  }
+  .earn .earnLower {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 1);
+    align-self: stretch;
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    padding: 11px 14px 0;
+  }
+  @media (max-width: 991px) {
+    .earn .earnLower {
+      max-width: 100%;
+    }
+  }
+  .earn .earnLowerInner {
+    display: flex;
+    gap: 9px;
+  }
+  @media (max-width: 991px) {
+    .earn .earnLowerInner {
+      flex-wrap: wrap;
+    }
+  }
+  .earn .img {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 44px;
+    border-radius: 8859px;
+    align-self: start;
+  }
+  .earn .twitterRight {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 11px;
+  }
+  @media (max-width: 991px) {
+    .earn .twitterRight {
+      max-width: 100%;
+    }
+  }
+  .earn .userNameHolder {
+    display: flex;
+    padding-right: 33px;
+    gap: 20px;
+    font-size: 13px;
+    white-space: nowrap;
+    justify-content: space-between;
+  }
+  @media (max-width: 991px) {
+    .earn .userNameHolder {
+      flex-wrap: wrap;
+      padding-right: 20px;
+      white-space: initial;
+    }
+  }
+  .earn .userName {
+    align-self: start;
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+  }
+  @media (max-width: 991px) {
+    .earn .userName {
+      flex-wrap: wrap;
+      white-space: initial;
+    }
+  }
+  .earn .userNameVerified {
+    display: flex;
+    padding-right: 23px;
+    gap: 2px;
+    color: rgba(47, 47, 47, 1);
+    font-weight: 700;
+    justify-content: space-between;
+  }
+  @media (max-width: 991px) {
+    .earn .userNameVerified {
+      white-space: initial;
+    }
+  }
+  .earn .userName {
+    font-family: Inter, sans-serif;
+    padding-right: 3px;
+  }
+  @media (max-width: 991px) {
+    .earn .userName {
+      white-space: initial;
+    }
+  }
+  .earn .verifiedBadge {
+    aspect-ratio: 0.94;
+    object-fit: auto;
+    object-position: center;
+    width: 16px;
+    align-self: start;
+  }
+  .earn .userId {
+    font-family: Inter, sans-serif;
+    align-self: start;
+    color: rgba(83, 100, 113, 1);
+    font-weight: 400;
+  }
+  @media (max-width: 991px) {
+    .earn .userId {
+      white-space: initial;
+    }
+  }
+  .earn .twitterLogo {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 21px;
+  }
+  .earn .twitterDescription {
+    color: rgba(47, 47, 47, 1);
+    margin-top: 8px;
+    font: 400 12px Inter, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .earn .twitterDescription {
+      max-width: 100%;
+    }
+  }
+  .earn .twitterImageHolder {
+    border-radius: 14px;
+    display: flex;
+    margin-top: 13px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 1px;
+    border: 1px solid rgba(207, 217, 222, 1);
+  }
+  @media (max-width: 991px) {
+    .earn .twitterImageHolder {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+  }
+  .earn .twitterImage {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    aspect-ratio: 1.78;
+    width: 404px;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .earn .img-4 {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .earn .img-5 {
+    aspect-ratio: 1.79;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+  }
+  .earn .twitterBottom {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    gap: 20px;
+    font-size: 12px;
+    color: rgba(83, 100, 113, 1);
+    font-weight: 400;
+    white-space: nowrap;
+    justify-content: space-between;
+  }
+  @media (max-width: 991px) {
+    .earn .twitterBottom {
+      max-width: 100%;
+      flex-wrap: wrap;
+      padding-right: 20px;
+      white-space: initial;
+    }
+  }
+  .earn .likeRetweet {
+    align-self: start;
+    display: flex;
+    gap: 7px;
+  }
+  @media (max-width: 991px) {
+    .earn .likeRetweet {
+      white-space: initial;
+    }
+  }
+  .earn .retweetHolder {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+  @media (max-width: 991px) {
+    .earn .retweetHolder {
+      white-space: initial;
+    }
+  }
+  .earn .retweetIcon {
+    aspect-ratio: 1.14;
+    object-fit: auto;
+    object-position: center;
+    width: 17px;
+  }
+  .earn .retweetCount {
+    font-family: Inter, sans-serif;
+    padding: 3px 10px 1px 11px;
+  }
+  @media (max-width: 991px) {
+    .earn .retweetCount {
+      white-space: initial;
+    }
+  }
+  .earn .likeHolder {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+  @media (max-width: 991px) {
+    .earn .likeHolder {
+      white-space: initial;
+    }
+  }
+  .earn .likeIcon {
+    aspect-ratio: 1.06;
+    object-fit: auto;
+    object-position: center;
+    width: 16px;
+  }
+  .earn .likeCount {
+    font-family: Inter, sans-serif;
+    padding: 3px 10px 1px 11px;
+  }
+  @media (max-width: 991px) {
+    .earn .likeCount {
+      white-space: initial;
+    }
+  }
+  .earn .infoIcon {
+    aspect-ratio: 0.94;
+    object-fit: auto;
+    object-position: center;
+    width: 16px;
+  }

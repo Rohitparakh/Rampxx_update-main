@@ -1,0 +1,197 @@
+.leaderBoard.div {
+    border-radius: 16px;
+    background-color: rgba(13, 13, 16, 1);
+    box-shadow: 5px 8px 10px 2px rgba(0,0,0, 0.1);
+    display: flex;
+    max-width: 784px;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 60px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+
+  }
+  @media (max-width: 991px) {
+    .leaderBoard.div {
+      padding: 10px 20px;
+      max-width:98vw;
+    }
+  }
+  .leaderBoard .leaderBoardInner {
+    display: flex;
+    width: 455px;
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .leaderBoard .leaderBoardHeader {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+  }
+  @media (max-width: 991px) {
+    .leaderBoard .leaderBoardHeader {
+      max-width: 100%;
+    }
+  }
+  .leaderBoard .leaderBoardTitle {
+    letter-spacing: 1.92px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font: 96px VT323, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .leaderBoard .leaderBoardTitle {
+      max-width: 100%;
+      margin-right: 10px;
+      font-size: 40px;
+    }
+  }
+  .leaderBoard .leaderBoardNumbers {
+    align-self: end;
+    display: flex;
+    margin-top: 52px;
+    width: 270px;
+    max-width: 100%;
+    gap: 20px;
+    font-size: 32px;
+    letter-spacing: 0.32px;
+  }
+  @media (max-width: 991px) {
+    .leaderBoard .leaderBoardNumbers {
+      margin-top: 40px;
+    }
+  }
+  .leaderBoard .top-10 {
+    font-family: VT323, sans-serif;
+    color: rgba(255, 255, 255, 1);
+    margin: auto 0;
+  }
+  .leaderBoard .leaderBoardUsersHolder {
+    display: flex;
+    justify-content: end;
+    gap: 9px;
+    color: rgba(125, 125, 125, 1);
+    white-space: nowrap;
+    flex: 1;
+  }
+  @media (max-width: 991px) {
+    .leaderBoard .leaderBoardUsersHolder {
+      white-space: initial;
+    }
+  }
+  .leaderBoard .img {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 24px;
+    margin: auto 0;
+  }
+  .leaderBoard .leaderBoardUsers {
+    font-family: VT323, sans-serif;
+  }
+  .leaderBoard .leaderBoardSingle {
+    background-color: #262626;
+    border-color: rgba(50, 50, 50, 1);
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .leaderBoard .leaderBoardSingle:hover{
+    background-color: #2E2E2E;
+    cursor: pointer;
+  }
+  .leaderBoard .leaderBoardSingle:first-child{
+    margin-top: 14px;
+
+  }
+  @media (max-width: 991px) {
+    .leaderBoard .leaderBoardSingle {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .leaderBoard .leaderBoardSingleInner {
+    display: flex;
+    gap: 9px;
+  }
+  .leaderBoard .leaderBoardPosition {
+    border-color: rgba(50, 50, 50, 1);
+    color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+    letter-spacing: 0.32px;
+    padding: 24px 5px;
+    font: 700 32px SF Pro Display, sans-serif;
+    width: 60px;
+    text-align: center;
+  }
+  @media (max-width: 991px) {
+    .leaderBoard .leaderBoardPosition {
+      white-space: initial;
+    }
+  }
+  .leaderBoard .userImage {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 63px;
+    border-radius: 2px;
+    margin: auto 0;
+    /* border: 1px solid rgba(0, 0, 0, 1); */
+  }
+  .leaderBoard .userNameHolder {
+    align-self: start;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.11px;
+  }
+  .leaderBoard .userNameTitle {
+    font-family: VT323, sans-serif;
+    color: rgba(255, 255, 255, 1);
+  }
+  .leaderBoard .streaksHolder {
+    display: flex;
+    margin-top: 8px;
+    gap: 3px;
+    color: rgba(125, 125, 125, 1);
+  }
+  .leaderBoard .globeIcons {
+    aspect-ratio: 1.1;
+    object-fit: auto;
+    object-position: center;
+    width: 11px;
+  }
+  .leaderBoard .streaksTitle {
+    font-family: VT323, sans-serif;
+  }
+  .leaderBoard .leaderBoardSingleBadge {
+    border-color: rgba(50, 50, 50, 1);
+    display: flex;
+    flex-direction: column;
+    color: rgba(125, 125, 125, 1);
+    white-space: nowrap;
+    padding: 13px 22px;
+  }
+  @media (max-width: 991px) {
+    .leaderBoard .leaderBoardSingleBadge {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+  .leaderBoard .badgeNumber {
+    letter-spacing: 0.29px;
+    text-align: center;
+    font: 700 29px SF Pro Display, sans-serif;
+  }
+  .leaderBoard .badgeTitle {
+    letter-spacing: 0.11px;
+    margin-top: 17px;
+    font: 400 11px VT323, sans-serif;
+  }
+  

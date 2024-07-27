@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.vt323-regular {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }  
+:root {
+    --node-streak: #0f0f0f;
+    --lines: #b3cf3d;
+    --computational-fog-top: #000000;
+    --computational-fog-bot: #000000;
+    --visual-distortion-zapper: 360px;
+    --nano-velocity: 8s;
+    --grid-color: rgba(255, 255, 255, 0.1);
+    --bg-color: #000000;
+    --text-color: #D0F603;
+  }
+  
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  body {
+    @apply relative h-full;
+    background: linear-gradient(
+      var(--computational-fog-top) 25%,
+      var(--node-streak) 50%,
+      var(--node-streak) 50%,
+      var(--computational-fog-bot) 100%
+    );
+  }
+  
+  .wrap {
+    @apply w-full h-full absolute m-auto;
+    perspective: var(--visual-distortion-zapper);
+    perspective-origin: 50% 50%;
+  }
+  
+  .top-plane,
+  .bottom-plane {
+    width: 200%;
+    height: 130%;
+    position: absolute;
+    background-image: linear-gradient(var(--node-streak) 2px, transparent 2px),
+      linear-gradient(to right, var(--node-streak) 2px, transparent 2px);
+    background-size: 100px 100px, 100px 100px;
+    background-position: -1px -1px, -1px -1px;
+    animation: planeMoveTop var(--nano-velocity) infinite linear;
+  }
+  
+  .top-plane {
+    bottom: -30%;
+    left: -50%;
+    transform: rotateX(85deg);
+
+  }
+  
+  .bottom-plane {
+    @apply top-[-30%];
+    transform: rotateX(-85deg);
+    animation: planeMoveBot var(--nano-velocity) infinite linear;
+  }
+  
+  /* SIDEWAYS LIKE CODE PEN */
+  /* @keyframes planeMoveTop {
+    from {
+      background-position: 0px -100px, 0px 0px;
+    }
+    to {
+      background-position: 0px 0px, 100px 0px;
+    }
+  }
+  
+  @keyframes planeMoveBot {
+    from {
+      background-position: 0px 0px, 0px 0px;
+    }
+    to {
+      background-position: 0px -100px, 100px 0px;
+    }
+  } */
+  
+  /* FAST */
+  /* @keyframes planeMoveTop {
+    from {
+      background-position: 0px 100px, 0px 0px;
+    }
+    to {
+      background-position: 0px -100px, 0px 0px;
+    }
+  }
+  
+  @keyframes planeMoveBot {
+    from {
+      background-position: 0px -100px, 0px 0px;
+    }
+    to {
+      background-position: 0px 100px, 0px 0px;
+    }
+  }
+   */
+  @keyframes planeMoveTop {
+    from {
+      background-position: 0px 0px, 0px 0px;
+    }
+    to {
+      background-position: 0px -100px, 0px 0px;
+    }
+  }
+  
+  @keyframes planeMoveBot {
+    from {
+      background-position: 0px 0px, 0px 0px;
+    }
+    to {
+      background-position: 0px 100px, 0px 0px;
+    }
+  }
+  
+  @media (max-height: 350px) {
+    .wrap {
+      perspective: calc(var(--visual-distortion-zapper) - 150px);
+    }
+  }
+  
+  /* =============================== BTN FI LINES =============================== */
+  .btn-fi {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    /* background: rgba(186, 0, 37, 0.1); */
+    /* border: 2px solid rgba(186, 0, 37, 0.3); */
+    color: #b3cf3d;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    /* height: 50px; */
+    justify-content: center;
+    letter-spacing: 1.8px;
+    /* margin-top: 25px; */
+    outline: none;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    /* width: 200px; */
+  }
+  
+  .btn-fi:before {
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+  }
+  
+  .btn-fi:after,
+  .btn-fi:before {
+    background: #b3cf3d;
+    content: "";
+    height: 3px;
+    position: absolute;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    width: 0px;
+  }
+  .btn-fi:after {
+    bottom: 0;
+    right: 50%;
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  .btn-fi:hover {
+    -webkit-box-shadow: 1px 1px 8px rgba(179, 207, 61, 0.3);
+    box-shadow: 1px 1px 20px rgba(179, 207, 61, 0.3);
+    /* color: #ff0033; */
+    text-shadow: 0 0 8px rgba(179, 207, 61, 0.4);
+  }
+  .btn-fi:hover.btn-fi:before {
+    left: 0;
+    width: 100%;
+  }
+  .btn-fi:hover.btn-fi:after {
+    right: 0;
+    width: 100%;
+  }
+  .btn-fi:hover .btn-fi-line:before {
+    bottom: 0;
+    height: 100%;
+  }
+  .btn-fi:hover .btn-fi-line:after {
+    top: 0;
+    height: 100%;
+  }
+  .btn-fi-line:before {
+    bottom: 50%;
+    right: 0;
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  .btn-fi-line:after,
+  .btn-fi-line:before {
+    background: #b3cf3d;
+    content: "";
+    height: 0px;
+    position: absolute;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    width: 3px;
+  }
+  .btn-fi-line:after {
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateX(-1px);
+    transform: translateX(-1px);
+  }
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  
+  .select-none {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  img, svg {
+    pointer-events: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    -webkit-user-drag: none !important;
+    -khtml-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -o-user-drag: none !important;
+    user-drag: none !important;
+  }
+  
+  .noselect {
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
+  
+
+  
